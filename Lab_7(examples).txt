@@ -1,0 +1,133 @@
+
+
+             Lab : 07
+
+ Examples
+
+    //   Text label
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lab_7_Example_
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "This is My first Form";
+        }
+    }
+}
+
+     //  Button Image 
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lab_7_Example_
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Text = "Click Here";
+           button1.Image = Image.FromFile("C:\\testimage.jpg");
+        }
+    }
+}
+
+     // Combo Box
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lab_7_Example_
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("Monday");
+            comboBox1.Items.Add("Tuesday");
+            comboBox1.Items.Add("Wednesday");
+            comboBox1.Items.Add("Thursday");
+            comboBox1.Items.Add("Friday");
+            comboBox1.Items.Add("saturday");
+            comboBox1.Items.Add("Sunday");
+
+            var item = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+            MessageBox.Show(item);
+        }
+    }
+}
+
+      // Radio button
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lab_7_Example_
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+            radioButton2.Checked = true;
+            radioButton3.Checked = true;
+
+            button1.Text = "Your Selected Color";
+        }
+    }
+}
+
+
+      
